@@ -1,3 +1,4 @@
-config.yaml
+*.yaml
+*.pkl
 .idea
 .qiniu_pythonsdk_hostscache.json
