@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #console {
+            font-family: "Fira Code", monospace;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function on_blur() {
+        const p = document.getElementById("console");
+        p.textContent = document.getElementById("file_selector").value;
+        console.log(p)
+    }
+</script>
+
+<form action="/upload" onsubmit="on_blur()" enctype="application/x-www-form-urlencoded" method="post">
+    <input type="file" name="data" id="file_selector" onblur="on_blur()">
+
+    <label for="class_selector"></label>
+    <select name="class_" id="class_selector" onclick="on_blur()">
+        <option value="123">234</option>
+        <option value="234">345</option>
+    </select>
+
+    <button type="submit">submit</button>
+</form>
+
+<p id="console"></p>
+
+</body>
+</html>

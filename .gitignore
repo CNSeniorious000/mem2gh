@@ -1,4 +1,7 @@
 *.yaml
 *.pkl
 .idea
+.vscode
 .qiniu_pythonsdk_hostscache.json
+__pycache__
+design
